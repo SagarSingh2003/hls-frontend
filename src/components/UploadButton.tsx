@@ -1,7 +1,5 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import './UploadButton.css';
-import Hls from 'hls.js';
-import Plyr, { APITypes, PlyrProps } from 'plyr-react';
 import 'plyr-react/plyr.css';
 import PlayerComponent from './PlayerComponent';
 
@@ -11,11 +9,9 @@ const UploadButton = () => {
   const [src, setSrc] = useState<string>('');
   const [showUploadButton, setShowUploadButton] = useState(false);
   const [uploadUrl, setUploadUrl] = useState('');
-  const [count , setCount] = useState(0);
   const [showSource , setShowSource] = useState<any>(false);
   const [showLoadingState , setShowLoadingState] = useState<any>(true);
 
-    console.log(count);
 //   useEffect(() => {
 //     console.log("rerunning :" , count++)
 //     const video = document.getElementById('plyr') as HTMLVideoElement;
@@ -171,7 +167,7 @@ const UploadButton = () => {
           {showLoadingState ? "Upload File" : "Processing" }
         </button>
       )}
-      <PlayerComponent source={src} count={count} uploadUrl={uploadUrl} showUploadButton={showUploadButton} file={file} error={error} showSource={showSource}/>
+      <PlayerComponent source={src} uploadUrl={uploadUrl} showUploadButton={showUploadButton} file={file} error={error} showSource={showSource}/>
       <div>
       </div>
     </div>

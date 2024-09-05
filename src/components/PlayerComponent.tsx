@@ -1,8 +1,8 @@
 import Hls from "hls.js";
 import Plyr, { APITypes, PlyrProps } from "plyr-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef} from "react";
 
-const PlayerComponent = ({source , count , uploadUrl , showUploadButton , file, error , showSource} : {source : string , count : number , uploadUrl : string , showUploadButton : boolean , file : any , error : any , showSource : boolean }) => {
+const PlayerComponent = ({source , uploadUrl , showUploadButton , file, error , showSource} : {source : string  , uploadUrl : string , showUploadButton : boolean , file : any , error : any , showSource : boolean }) => {
 
     const ref = useRef<APITypes>(null);
 
@@ -66,7 +66,7 @@ const PlayerComponent = ({source , count , uploadUrl , showUploadButton , file, 
     };
 
     loadVideo();
-} , [source ,count , uploadUrl , showUploadButton , file, error , showSource]);
+} , [source , uploadUrl , showUploadButton , file, error , showSource]);
 
 
 

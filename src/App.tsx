@@ -1,7 +1,6 @@
 
 import './App.css'
 import UploadButton from './components/UploadButton'
-import React from 'react';
 
 function App() {
 
